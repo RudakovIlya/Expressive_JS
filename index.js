@@ -93,3 +93,35 @@ const sum = (arr) => {
 	}
 	return sum
 }
+
+/*------------------------------------------------------*/
+
+// Chapter: Data structures (objects and arrays)
+
+// Task: Reversing an array
+
+// Solution: 
+
+const reverseArray = (arr) => {
+	const newArr = [];
+
+	for (let i = arr.length - 1; i >= 0; i--) {
+		newArr.push(arr[i])
+	}
+
+	return newArr;
+
+}
+
+const reverseArrayInPlace = (array) => {
+	for (let i = 0; i < Math.floor(array.length / 2); i++) {
+
+		let oldValue = array[i];
+
+		array[i] = array[array.length - 1 - i];
+
+		array[array.length - 1 - i] = oldValue;
+
+	}
+	return array;
+}
