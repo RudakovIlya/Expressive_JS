@@ -32,5 +32,36 @@ const isEven = (num) => {
 
 };
 
-console.log(isEven(2));
+/*------------------------------------------------------*/
 
+// Chapter: Function
+
+// Task: Bean Counting
+
+// Solution:
+
+
+const countChar = (str, char) => {
+
+	let count = 0;
+
+	for (let i = 0; i < str.length; i++) {
+
+		const symb = str[i];
+
+		if (symb == char) {
+			count += 1
+		}
+
+	}
+	return count
+}
+
+const countBs = (str) => {
+	return countChar(string, "B");
+}
+
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
