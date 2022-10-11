@@ -125,3 +125,35 @@ const reverseArrayInPlace = (array) => {
 	}
 	return array;
 }
+
+/*------------------------------------------------------*/
+
+// Chapter: Data structures (objects and arrays)
+
+// Task: A list
+
+// Solution: 
+
+
+const arrayToList = (arr) => {
+	let list = null;
+	for (let i = arr.length - 1; i >= 0; i--) {
+		list = { value: arr[i], rest: list };
+	}
+	return list;
+}
+
+const listToArray = (obj) => {
+	const arr = [];
+
+	for (const key in obj) {
+
+		if (typeof obj[key] == 'number') {
+			arr.push(obj[key])
+		}
+
+	}
+	return arr
+}
+
+console.log(listToArray(arrayToList([1, 2, 3])));
