@@ -120,6 +120,8 @@ console.log(arrayToList([1, 2, 3]));
 
 function deepEqual(obj, obj2) {
 
+	let count = 0
+
 	for (const key in obj) {
 
 		if (typeof obj[key] === 'object') {
@@ -127,7 +129,6 @@ function deepEqual(obj, obj2) {
 			return deepEqual(obj[key], obj2[key]);
 
 		} else if (obj[key] === obj2[key]) {
-
 			return true
 
 		} else {
@@ -140,10 +141,56 @@ function deepEqual(obj, obj2) {
 
 }
 
-let obj = { here: { is: "an" }, object: 2, };
+let newObj = {
+	vb: {
+		s: 123,
+		bg: {
+			gh: {
+				vlgs: 123,
+				v: {
+					zxc: 'gul',
 
-console.log(deepEqual(obj, obj));
+					csa: {
+						vedw: 'ew1',
+					}
+				}
+			}
+		}
+	},
+	bg: {
+		fg: {
+			d: { vc: 1243 }
+		}
+	}
+}
 
-console.log(deepEqual(obj, { here: 1, object: 2 }));
+
+
+//let obj = { here: { is: "an" }, object: 2, };
+
+//console.log(deepEqual(newObj, newObj));
+
+console.log(deepEqual(newObj, {
+	vb: {
+		s: 123,
+		bg: {
+			gh: {
+				vlgs: 123,
+				v: {
+					zxc: 'gul',
+
+					csa: {
+						vedw: 'ew1',
+					}
+				}
+			}
+		}
+	},
+	bg: {
+		fg: {
+			d: { vc: 122143 }
+		}
+	}
+}));
 
 console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
