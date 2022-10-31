@@ -109,3 +109,41 @@ function nth(list, n) {
 }
 
 console.log(arrayToList([1, 2, 3]));
+
+/*------------------------------------------------------*/
+
+// Chapter: Data structures (objects and arrays)
+
+// Task: Deep comprasion
+
+// Solution: 
+
+function deepEqual(obj, obj2) {
+
+	for (const key in obj) {
+
+		if (typeof obj[key] === 'object') {
+
+			return deepEqual(obj[key], obj2[key]);
+
+		} else if (obj[key] === obj2[key]) {
+
+			return true
+
+		} else {
+
+			return false
+
+		}
+
+	}
+
+}
+
+let obj = { here: { is: "an" }, object: 2, };
+
+console.log(deepEqual(obj, obj));
+
+console.log(deepEqual(obj, { here: 1, object: 2 }));
+
+console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
